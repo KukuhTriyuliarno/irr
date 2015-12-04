@@ -1,0 +1,7 @@
+user ADMIN
+username : admin
+Password : admin
+
+user Pelanggan
+username : pelanggan
+password : pelanggan

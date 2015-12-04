@@ -1,0 +1,131 @@
+html{
+	font-family:Arial, Tahoma;
+	background:#f7f7f7;
+}
+
+/*------------------------------header----------------------------*/
+.header{
+	background-color:#1e8bc3;
+	z-index:1;
+	position:fixed;
+	top:0px; left:0px; right:0px;
+}
+.logo{
+	margin:5px 0 0 2%;
+	width:250px;
+	height:50px;
+}
+.user{
+	border:1px solid #3498db;
+	text-align:center;
+	margin:10px 2% 0 0;
+	padding:10px;
+	float:right;
+	width:100px;
+}
+.user a{
+	text-decoration:none;
+	color:#fff;
+}
+/*-------------------------------menu-----------------------------------*/
+.menu{
+	position:fixed;
+	top:40px;right:0px;bottom:0px;
+	background-color:#525252;
+	width:14%;
+}
+.menu a{
+	text-decoration:none;
+	display:block;
+}
+.menu ul{
+	list-style:none;
+	margin-top:25px;
+}
+.menu ul li{
+
+	border:none;
+	margin:0 0 0 -40px;
+	-webkit-transition:margin 0.5s;
+	-moz-transition:margin 0.5s;
+}
+.menu ul li:hover{
+	border-left:5px solid #525252;
+	margin:0 0 0 -60px;
+
+	background:#1e8bc3;
+	-webkit-transition:margin 0.8s;
+	-moz-transition:margin 0.8s;
+	-webkit-transition:background 0.3s;
+	-moz-transition:background 0.3s;
+	
+}
+.menu ul a{
+	color:#fff;
+	font-weight:bold;
+	margin-left:10px;
+	text-align:center;
+
+}
+.menu ul li img{
+	margin:10px 0 5px 0px;
+	border-radius:30px;
+}
+.panel{
+	display:none;
+}
+
+/*------------------------------beranda--------------------------------*/
+.container{
+	background:#fff;
+	border:1px solid #ccc;
+	box-shadow: 0 0 12px #ccc;
+	margin: 70px 1% 5px 0.8%;
+	width:82%;
+	padding:10px;
+	animation-name:jalan;
+	animation-duration:0.5s;
+	animation-delay:0s;
+	animation-timing-function:linear;
+	animation-direction:alternate;
+	
+}
+
+
+
+
+/*------------------------------screen-----------------------------*/
+@media screen and (max-width:480px){
+	.header{height:45px;}
+	.logo{margin:5px 0 0 10px;width:170px;height:35px;}
+	.user{font-size:0.8em; padding:5px;margin:10px 10px 0 0;}
+	.menu{display:none;}
+	.menu ul li img{display:none;}
+	.menu ul a{font-size:0.8em;}
+	.container{margin: 98px 2% 2% 1%; width:92%;}
+	.panel{display:inherit;background-color:#525252;margin-top:-15px;}
+	h2{font-size:1.0em;}
+	p{font-size:0.8em;}
+	.panel ul li{list-style:none; display:inline;}
+	.panel ul li img{border-radius:20px;margin:2% 2% 1% 1%;
+			-webkit-transition:box-shadow 0.5s;
+			-moz-transition:box-shadow 0.5s;}
+	.panel ul li img:hover{box-shadow:0 0 10px #ccc;
+			-webkit-transition:box-shadow 0.3s;
+			-moz-transition:box-shadow 0.3s;}
+
+}
+@media screen and (min-width:1124px){
+	.menu{width:200px;}
+	.container{width:82%;}
+}
+
+/*-------------------------------animasi---------------------------*/
+@-webkit-keyframes jalan{
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@-moz-keyframes jalan{
+	0% {opacity:0;}
+	100% {opacity:1;}
+}

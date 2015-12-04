@@ -1,0 +1,50 @@
+html{font-family:Arial, Tahoma;}
+/*--------------------------------Tampilan Header---------------------------------------*/
+.header{background-color:#1e8bc3; position:fixed; top:0px; left:0px; right:0px;}
+.header-container{width:1150px; margin:0 auto;}
+h2{color:#fff; padding-left:5px;}
+/*------------------------------------Body-----------------------------------------------*/
+body{background:#fff;}
+.body{width:1150px; margin:0 auto; padding:5px; background:#fff; border:1px solid #5B5E51;}
+.form{width:500px; float:left;}
+.out{width:650px; background:yellow; float:right;}
+/*-----------------------------------input inves-----------------------------------------*/
+.inv{margin-top:65px; border:2px solid #1e8bc3;}
+.inv .label{width:486px; background:#1e8bc3; padding:5px;}
+.inv label{font-weight:bold; color:#fff;}
+.inv input[type="text"]{width: 486px; font-size:14pt; padding:5px;text-align: right; background: #fff; border:none;}
+.inv input[type="text"]:hover{text-align: right; box-shadow:inset 0px 3px 5px #ccc;}
+/*----------------------------------input Tingkat bunga-----------------------------------*/
+
+.rrr{width:155px; margin-top:10px; float:left; border:2px solid #1e8bc3;}
+.rrr .label{width:145px; background:#1e8bc3; padding:5px; }
+.rrr label{font-weight: bold; color:#fff;}
+.rrr input[type="text"]{width: 145px; font-size:14pt; padding:5px; text-align:center; background: #fff;border:none;}
+.rrr input[type="text"]:hover{box-shadow:inset 0px 3px 5px #ccc;}
+/*----------------------------------input df1 dan df2---------------------------------------------*/
+.df1{width:156px; margin-left:10px; margin-top:10px; float:left; border:2px solid #1e8bc3;}
+.df1 .label{width:146px;background:#1e8bc3; padding:5px; }
+.df1 label{font-weight: bold; color:#fff;}
+.df1 input[type="text"]{width: 146px; font-size:14pt; padding:5px;text-align:center; background: #fff;border:none;}
+.df1 input[type="text"]:hover{box-shadow:inset 0px 3px 5px #ccc;}
+/*----------------------------------tabel periode-----------------------------------------------*/
+/*******thead************/
+.tabel_periode{margin-top:85px;}
+table{border:2px solid #1e8bc3;}
+.tabel_periode thead tr td {width:50px; background:#1e8bc3; color:#fff; font-weight:bold;}
+.tabel_periode thead tr td input{width:417px;}
+/*******button tambah******/
+.tabel_periode thead tr td input[type="button"]{background:#fff;font-weight:bold;padding:5px;border:none;}
+.tabel_periode thead tr td input[type="button"]:hover{box-shadow:0px 0px 3px #000;}
+/******tbody************/
+.records{background:#fff;}
+tr:nth-child(even){background:#3498db;}
+tr:nth-child(odd){background:#59abe3;}
+.records td div{text-align:center; font-weight:bold; color:#fff;}
+.records td input[type="text"]{width: 96%; font-size:14pt; padding:5px;text-align:right; background: #fff;}
+.records td input[type="text"]:hover{box-shadow:inset 0px 3px 5px #ccc;}
+/*******button kalkulasi********/
+input[type="submit"]{width:500px; height:33px; margin-top:10px; background:#1e8bc3; border:none;padding : 5px;color:#fff;font-size:12pt; font-weight: bold;}
+input[type="submit"]:hover{background:#fff;border:2px solid #1e8bc3; color:#1e8bc3;}
+
+

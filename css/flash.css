@@ -1,0 +1,36 @@
+#flash {
+	float:right;
+	margin-top:-55px;
+	z-index: 9999;
+	width:70%;
+	padding:10px;
+	visibility: hidden;
+	border:1px solid #18bb2f;
+	background:rgba(24,187,47,0.2);
+	color:#058718;
+}
+.clos{
+	float:right;
+	font-weight:bolder;
+}
+.clos a{
+	text-decoration:none;
+	color:#18bb2f;
+}
+
+
+#flash:target {
+visibility: visible;
+}
+@media screen and (max-width:480px){
+	#flash{
+		
+		width:58%;
+		padding:5px;
+		margin-top:-40px;
+	}
+	.isinya{
+		font-size:0.6em;
+	}
+	
+}

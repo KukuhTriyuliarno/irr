@@ -1,0 +1,104 @@
+html{
+	font-family:Arial, Tahoma;
+}
+.body{
+	margin: 0 auto;
+	width:350px;
+	height:320px;
+	margin-top:100px;
+	background:#e1e0e4;
+	box-shadow:0 0 5px #727273;
+	animation-name:jalan;
+	animation-duration:0.5s;
+	animation-delay:0s;
+	animation-timing-function:linear;
+	animation-direction:alternate;
+}
+/*-----------------------------header-------------------------*/
+.header{
+	background-color:#1e8bc3;
+	color:#fff;
+	height:45px;
+	padding:10px;
+}
+.logo{
+	width:250px;
+	height:50px;
+}
+/*-------------------------login--------------------------*/
+.masuk{
+	margin:-5px 0 0 0;
+	padding-left:10px;
+}
+.masuk h2{
+	text-align:center;
+	color:#555;
+}
+.masuk tr td input{
+	padding:5px;
+	width:310px;
+	font-size:1.1em;
+	text-align:center;
+}
+.masuk tr td input[type="text"], .masuk tr td input[type="password"]{
+	border:1px solid #ccc;
+	margin:0 5px 5px 0;
+}
+.masuk tr td input[type="text"]:hover,.masuk tr td input[type="password"]:hover{
+	box-shadow:0 0 5px #1e8bc3;
+}
+.masuk tr td input[type="submit"]{
+	background:#1e8bc3;
+	color:#fff;
+	width:320px;
+	border:2px solid #1e8bc3;
+	-webkit-transition:background-color 0.3s ease-in;
+	-moz-transition:background-color 0.3s ease-in;
+}
+.masuk tr td input[type="submit"]:hover,.masuk tr td input[type="submit"]:focus,.masuk tr td input[type="submit"]:active{
+	background-color:#e1e0e4;
+	-webkit-transition:background-color 0.3s ease-out;
+	-moz-transition:background-color 0.3s ease-out;
+	color:#1e8bc3;
+	border:2px solid #1e8bc3;
+	box-shadow:0 0 5px #1e8bc3;
+}
+.daftar{
+	margin-top:10px;
+	padding:15px;
+	color:#555;
+	font-size:0.8em;
+}
+/*-------------------------------footer------------------------*/
+.footer{
+	margin: 0 auto;
+	margin-top:50px;
+	width:350px;
+	text-align:center;
+	font-size:0.8em;
+	color:#555;
+}
+/*-------------------------------error--------------------------*/
+.error{
+	background-color:rgba(255,0,0,0.3);
+	border-left:5px solid #ff0000;
+	margin:0 auto;
+	width:330px;
+	padding:10px;
+}
+
+/*-------------------------------animasi---------------------------*/
+@-webkit-keyframes jalan{
+	0% {opacity:0;}
+	25% {opacity:0.25;}
+	50% {opacity:0.5;}
+	75% {opacity:0.75;}
+	100% {opacity:1;}
+}
+@-moz-keyframes jalan{
+	0% {opacity:0;}
+	25% {opacity:0.25;}
+	50% {opacity:0.5;}
+	75% {opacity:0.75;}
+	100% {opacity:1;}
+}

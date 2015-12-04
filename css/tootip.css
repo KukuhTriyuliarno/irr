@@ -1,0 +1,49 @@
+#tunggu {
+
+position:relative;
+}
+#tunggu::before {
+	content:"Menunggu Konfirmasi ";
+}
+
+#tunggu::before {
+font-size:0.8em;
+line-height:11px;
+font-family:Arial,sans-serif;
+text-transform:none;
+padding:8px 12px;
+top:-34px;
+left:42%;
+transition:.3s ease-out;
+background:#222;
+color:#fff;
+border-radius:2px;
+position:absolute;
+opacity:0;
+visibility:hidden;
+}
+
+/*------------panah-----------------*/
+#tunggu::after {
+content:" ";
+width:0;
+height:0;
+left:45%;
+top:-7px;
+transition:.3s ease-out;
+border-color:#222 transparent transparent;
+border-style:solid;
+width:0;
+height:0;
+border-left:7px solid transparent;
+border-right:7px solid transparent;
+border-top:7px solid #000;
+position:absolute;
+opacity:0;
+visibility:hidden;
+}
+
+#tunggu:hover::before, #tunggu:hover::after {
+opacity:1;
+visibility:visible;
+}
