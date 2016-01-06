@@ -1,5 +1,5 @@
 <?php
-require_once "config/connect.php";
+
 class User{
 	//Proses Login
 	public function getLogin($username,$password){
@@ -20,9 +20,9 @@ class User{
 			break;
 		}
 	
-		$login = mysql_query("SELECT * FROM tbl_user WHERE username='$username' AND password='$password'");
-		$ketemu = mysql_num_rows($login);
-		$r = mysql_fetch_array($login);
+		require_once "config/connect.php";
+		$res = $mysqli->query("SELECT * FROM tbl_user WHERE username='$username' AND password='$password'");
+		$r = $res->fetch_assoc();
 		// Apabila username dan password ditemukan
 		$_SESSION['level'] = $r['level'];
 		$_SESSION['username'] = $username;

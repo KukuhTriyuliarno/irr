@@ -11,11 +11,11 @@
 
 <hr />
 <?php
-
-$query = mysql_query("SELECT * FROM tbl_inv WHERE yn='n' ORDER BY id_inv DESC");
-$jumlah = mysql_num_rows($query);
+include "config/connect.php";
+$res = $mysqli->query("SELECT * FROM tbl_inv WHERE yn='n' ORDER BY id_inv DESC");
+$jumlah = $res->num_rows;
 if (!empty($jumlah)){	
-	while($d = mysql_fetch_array($query)){
+	while($d = $res->fetch_assoc()){
 ?>
 
 	<table border="0" cellpadding="5" cellspacing="0">

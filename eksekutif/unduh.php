@@ -2,9 +2,8 @@
 require('fpdf/fpdf.php');
 include "../config/connect.php";
 $q=$_GET['q'];
-$query = mysql_query("SELECT * FROM tbl_run_inv INNER JOIN tbl_inv ON tbl_inv.id_inv=tbl_run_inv.id_inv INNER JOIN tbl_user ON tbl_run_inv.id_user=tbl_user.id_user WHERE tbl_run_inv.id_inv='$q'");
-
-$data=mysql_fetch_array($query);
+$res = $mysqli->query("SELECT * FROM tbl_run_inv INNER JOIN tbl_inv ON tbl_inv.id_inv=tbl_run_inv.id_inv INNER JOIN tbl_user ON tbl_run_inv.id_user=tbl_user.id_user WHERE tbl_run_inv.id_inv='$q'");
+$data = $res->fetch_assoc();
 
 $nama = $data['fname'].' '.$data['lname'];
 $alamat = $data['address'];
@@ -18,9 +17,12 @@ $df2 = $data['df2'];
 $irr = $data['irr'];
 $periode = $data['jml_periode'];
 $kas = $data['kas'];
+
 $tgl_ctk = date("Y-m-d H:i:s", time()+60*60*6);
 $tgl_start = $data['tgl_start'];
+$format_tgl_start=date("d F Y", strtotime($tgl_start));
 $tgl_finish= $data['tgl_finish'];
+$format_tgl_finish=date("d F Y", strtotime($tgl_finish));
 
 class PDF extends FPDF
 {
@@ -110,11 +112,11 @@ $pdf->Cell(0,5,$periode.' Tahun',0,1);
 $pdf->Ln(1.5);
 $pdf->Cell(43);
 $pdf->Cell(12,5,'Mulai');
-$pdf->Cell(0,5,$tgl_start,0,1);
+$pdf->Cell(0,5,$format_tgl_start,0,1);
 $pdf->Ln(1.5);
 $pdf->Cell(43);
 $pdf->Cell(18,5,'Berakhir');
-$pdf->Cell(0,5,$tgl_finish,0,1);
+$pdf->Cell(0,5,$format_tgl_finish,0,1);
 
 $pdf->Ln(1.5);
 $pdf->Cell(40,5,'Arus Kas');

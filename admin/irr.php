@@ -54,7 +54,7 @@
         	<thead>
             <tr>
                 <td class="p">Periode</td>
-                <td><input type="button" name="add_btn" value="+ Arus Kas (Rp.)" id="add_btn"></td>
+                <td><input type="button" name="add_btn" value="Klik >> + Arus Kas (Rp.) " id="add_btn"></td>
             </tr>
             </thead>
             <tbody id="container">

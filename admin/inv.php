@@ -3,11 +3,10 @@
 <hr />
 <?php
 include "config/connect.php";
-
-$query = mysql_query("SELECT * FROM tbl_run_inv INNER JOIN tbl_inv ON tbl_inv.id_inv=tbl_run_inv.id_inv INNER JOIN tbl_user ON tbl_user.id_user=tbl_run_inv.id_user");
-$jumlah = mysql_num_rows($query);
+$res = $mysqli->query("SELECT * FROM tbl_run_inv INNER JOIN tbl_inv ON tbl_inv.id_inv=tbl_run_inv.id_inv INNER JOIN tbl_user ON tbl_user.id_user=tbl_run_inv.id_user");
+$jumlah = $res->num_rows;
 if (!empty($jumlah)){	
-	while($data = mysql_fetch_array($query)){
+	while($data = $res->fetch_assoc()){
 ?>
 	<table border="0" cellpadding="5" cellspacing="0">
 	<thead>

@@ -9,13 +9,10 @@
 <hr />
 <?php
 include "config/connect.php";
-
-$query = mysql_query("SELECT * FROM tbl_run_inv INNER JOIN tbl_user ON tbl_run_inv.id_user=tbl_user.id_user INNER JOIN tbl_inv ON tbl_run_inv.id_not=tbl_inv.id_inv WHERE tbl_inv.yn='y' AND tbl_run_inv.id_inv='0'  ORDER BY tbl_run_inv.id_run DESC");
-$jumlah = mysql_num_rows($query);
-//$id_user = $d['id_user'];
-//$queri = mysql_query("SELECT * FROM tbl_inv WHERE id_user='$id_user'");
+$res = $mysqli->query("SELECT * FROM tbl_run_inv INNER JOIN tbl_user ON tbl_run_inv.id_user=tbl_user.id_user INNER JOIN tbl_inv ON tbl_run_inv.id_not=tbl_inv.id_inv WHERE tbl_inv.yn='y' AND tbl_run_inv.id_inv='0'  ORDER BY tbl_run_inv.id_run DESC");
+$jumlah = $res->num_rows;
 if (!empty($jumlah)){	
-	while($d = mysql_fetch_array($query)){
+	while($d = $res->fetch_assoc()){
 ?>
 
 	<table border="0" cellpadding="5" cellspacing="0">

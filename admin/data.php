@@ -13,18 +13,17 @@
 <div id="flash">
 <div class="clos"><a href="" title="close">x</a></div>
 <div class="isinya">
-<a>Berhasil Hapus, Semoga tidak ada Penyesalan</a>
+<a>Berhasil di Hapus</a>
 </div>
 </div>
 
 <hr />
 <?php
 include "config/connect.php";
-
-$query = mysql_query("SELECT * FROM tbl_inv WHERE yn='n' ORDER BY id_inv DESC");
-$jumlah = mysql_num_rows($query);
+$res = $mysqli->query("SELECT * FROM tbl_inv WHERE yn='n' ORDER BY id_inv DESC");
+$jumlah = $res->num_rows;
 if (!empty($jumlah)){	
-	while($data = mysql_fetch_array($query)){
+	while($data = $res->fetch_assoc()){
 ?>
 
 	<table border="0" cellpadding="5" cellspacing="0">

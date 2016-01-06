@@ -3,15 +3,16 @@
 <h2>Investasi</h2>
 <hr />
 <?php
+include "config/connect.php";
 $username = $_SESSION['username'];
-$query = mysql_query("SELECT * FROM tbl_user WHERE username='$username'");
-$data = mysql_fetch_array($query);
+$res = $mysqli->query("SELECT id_user FROM tbl_user WHERE username='$username'");
+$data = $res->fetch_assoc();
 $id_user = $data['id_user'];
 
-$query = mysql_query("SELECT * FROM tbl_run_inv INNER JOIN tbl_inv ON tbl_inv.id_inv=tbl_run_inv.id_inv WHERE tbl_run_inv.id_user='$id_user' AND tbl_inv.id_inv=tbl_run_inv.id_inv ORDER BY tbl_run_inv.id_run DESC");
-$jumlah = mysql_num_rows($query);
+$result = $mysqli->query("SELECT * FROM tbl_run_inv INNER JOIN tbl_inv ON tbl_inv.id_inv=tbl_run_inv.id_inv WHERE tbl_run_inv.id_user='$id_user' AND tbl_inv.id_inv=tbl_run_inv.id_inv ORDER BY tbl_run_inv.id_run DESC");
+$jumlah = $result->num_rows;
 if (!empty($jumlah)){	
-	while($d = mysql_fetch_array($query)){
+	while($d = $result->fetch_assoc()){
 ?>
 	<table border="0" cellpadding="5" cellspacing="0">
 	<thead>

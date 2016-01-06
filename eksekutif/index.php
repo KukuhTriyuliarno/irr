@@ -13,8 +13,8 @@
 <?php
 include "config/connect.php";
 $username = $_SESSION['username'];
-$query = mysql_query("SELECT * FROM tbl_user WHERE username='$username'");
-$data = mysql_fetch_array($query);
+$res = $mysqli->query("SELECT * FROM tbl_user WHERE username='$username'");
+$data = $res->fetch_assoc();
 ?>
 
 <div class="header">

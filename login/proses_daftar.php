@@ -10,8 +10,9 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $address = $_POST['address'];
 
-$query = mysql_query("INSERT INTO tbl_user VALUES ('','$username','$password','$fname','$lname','$address','$email','$phone','$fb','$twitter','eksekutif')");
-if ($query){
+$res = $mysqli->query("INSERT INTO tbl_user VALUES ('','$username','$password','$fname','$lname','$address','$email','$phone','$fb','$twitter','eksekutif')");
+
+if ($res){
 	header("location:../");
 }
 ?>

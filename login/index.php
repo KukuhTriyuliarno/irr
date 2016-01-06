@@ -50,7 +50,10 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 	<p>Copyright @2015</p>
 	<a>Depeloper By</a><br/>
 	<a>Kukuh Triyuliarno Hidayat</a><br/>
-	
+	<a>Punky Tri Kisworo Adi</a><br/>
+	<a>Alfarizi Nugraha</a><br/>
+	<a>Anisa Juli Herowati</a><br/>
+	<a>Tusmaemunah</a><br/>
 </div>
 </body>
 </html>
